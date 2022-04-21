@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;1,300&family=BioRhyme:wght@300;700;800&display=swap");
+
+:root {
+  /* General Margins, paddings */
+  --g-margin: 0.75rem;
+  --g-padding: 0.25rem;
+
+  /* FONTS */
+  --font-special: "BioRhyme", serif;
+  --font-normal: "Barlow", sans-serif;
+
+  /* FONT WEIGHT */
+  --fw-400: 400;
+  --fw-300: 300;
+  --fw-700: 700;
+  --fw-900: 800;
+
+  /* COLORS */
+  --clr-white: 0 00% 91%;
+  --clr-blue: 245 100% 8%;
+  --clr-black: 0 0% 3%;
+  --clr-brown: 37 61% 29%;
+  --clr-green: 132 58% 8%;
+
+  /* Border & Shadows */
+  --border-radius: 6px;
+  --bs-white: -2px 3px 6px -3px hsl(0, 0%, 3%);
+  --bs-blue: -2px 3px 6px -3px hsl(245, 100%, 8%);
+  --bs-black: -2px 3px 6px -3px hsl(0, 0%, 3%);
+  --bs-brown: -2px 3px 6px -3px hsl(37, 61%, 29%);
+}

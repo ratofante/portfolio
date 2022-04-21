@@ -1,0 +1,26 @@
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  max-height: 90px;
+  padding: var(--g-margin);
+}
+.logo-container {
+  position: relative;
+  width: clamp(50px, 18vw, 75px);
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    border-radius: 50%;
+    width: clamp(50px, 18vw, 75px);
+    height: clamp(50px, 18vw, 75px);
+  }
+  & #logo-full {
+    position: absolute;
+    top: 0;
+    opacity: 1;
+  }
+}
