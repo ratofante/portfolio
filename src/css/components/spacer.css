@@ -1,0 +1,15 @@
+.spacer-container {
+  position: relative;
+  & .spacer:first-child {
+    top: 6px;
+    z-index: -1;
+  }
+}
+.spacer {
+  position: relative;
+  aspect-ratio: 1;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

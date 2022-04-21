@@ -1,11 +1,19 @@
+.section-wrapper {
+  position: relative;
+}
 header {
+  padding-inline: var(--g-margin);
+}
+.top-header {
+  overflow-x: hidden;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   width: 100vw;
   max-height: 90px;
-  padding: var(--g-margin);
+  margin-bottom: 20vh;
+  padding-block: var(--g-margin);
 }
 .logo-container {
   position: relative;
@@ -22,5 +30,13 @@ header {
     position: absolute;
     top: 0;
     opacity: 1;
+  }
+}
+.bottom-header {
+  padding-inline: var(--inline-padding);
+}
+.header-bajada {
+  & h1 {
+    text-align: center;
   }
 }

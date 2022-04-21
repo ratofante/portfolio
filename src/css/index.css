@@ -2,6 +2,8 @@
 @import "base/variables.css";
 @import "base/generals.css";
 
+@import "components/spacer.css";
+
 @import "UI_KIT_DESIGN/ui_kit_design.css";
 
 @import "sections/header.css";

@@ -17,10 +17,10 @@
 
   /* COLORS */
   --clr-white: 0 00% 91%;
-  --clr-blue: 245 100% 8%;
+  --clr-blue: 245 100% 8%; /* dark #030029 light #474561*/
   --clr-black: 0 0% 3%;
-  --clr-brown: 37 61% 29%;
-  --clr-green: 132 58% 8%;
+  --clr-brown: 37 61% 29%; /*dark #77541d light #988059*/
+  --clr-green: 132 58% 8%; /*dark #09200d light #4b5b4e*/
 
   /* Border & Shadows */
   --border-radius: 6px;
@@ -28,4 +28,7 @@
   --bs-blue: -2px 3px 6px -3px hsl(245, 100%, 8%);
   --bs-black: -2px 3px 6px -3px hsl(0, 0%, 3%);
   --bs-brown: -2px 3px 6px -3px hsl(37, 61%, 29%);
+
+  /* Spacing */
+  --inline-padding: 3rem;
 }
