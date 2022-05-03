@@ -15,7 +15,7 @@ const Header = () => {
             <Bajada />
          </div>
       </header>
-      <Separator />
+      <Separator type={'section'} />
    </>)
 }
 

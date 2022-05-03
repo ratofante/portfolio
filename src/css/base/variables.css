@@ -16,9 +16,9 @@
   --fw-900: 800;
 
   /* COLORS */
-  --clr-white: 0 00% 91%;
+  --clr-white: 0 0% 91%;
   --clr-blue: 245 100% 8%; /* dark #030029 light #474561*/
-  --clr-black: 0 0% 3%;
+  --clr-black: 0 0% 3%; /*  	#080808 */
   --clr-brown: 37 61% 29%; /*dark #77541d light #988059*/
   --clr-green: 132 58% 8%; /*dark #09200d light #4b5b4e*/
 

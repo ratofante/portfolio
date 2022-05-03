@@ -7,9 +7,9 @@ import MyWork from './sections/MyWork'
 const Home = () => {
    return (<>
       <AboutMe />
-      <Separator />
+      <Separator type={'section'} />
       <MyWork />
-      <Separator />
+      <Separator type={'section'} />
       <Contact />
    </>)
 }

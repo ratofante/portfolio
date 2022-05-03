@@ -65,9 +65,9 @@ select {
   --fw-900: 800;
 
   /* COLORS */
-  --clr-white: 0 00% 91%;
+  --clr-white: 0 0% 91%;
   --clr-blue: 245 100% 8%; /* dark #030029 light #474561*/
-  --clr-black: 0 0% 3%;
+  --clr-black: 0 0% 3%; /*  	#080808 */
   --clr-brown: 37 61% 29%; /*dark #77541d light #988059*/
   --clr-green: 132 58% 8%; /*dark #09200d light #4b5b4e*/
 
@@ -83,6 +83,7 @@ select {
 }html {
   font-size: 10px;
   font-family: var(--font-normal);
+  overflow-x: hidden;
 }body {
   background-color: var(--white);
   max-width: 100vw;
@@ -92,6 +93,7 @@ select {
   margin: var(--g-margin);
   padding: var(--g-padding);
 }h1,h2,h3,h4,h5,h6 {
+  text-align: inherit;
   font-family: var(--font-special);
 }h1 {
   font-size: 4.3rem;
@@ -114,7 +116,9 @@ h6 {
   text-align: center;
 }.text-container {
   padding-inline: var(--inline-padding)
-}.text-container h2 {
+}.text-container > * {
+    margin-bottom: 1rem;
+  }.text-container h2 {
     text-align: center;
   }.spacer-container {
   position: relative
@@ -123,12 +127,23 @@ h6 {
     z-index: -1;
   }.spacer {
   position: relative;
-  aspect-ratio: 1;
+  aspect-ratio: 6/5;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}section {
+}.avatar-main {
+  display: flex;
+  flex-direction: row;
+}.avatar-img {
+  position: relative;
+  width: 50%;
+  margin: auto;
+  margin-block: 1rem
+}.avatar-img img {
+    width: 100%;
+    border-radius: 50%;
+  }section {
   margin: var(--g-margin);
 }.color-palette {
   display: flex;
@@ -284,4 +299,18 @@ h6 {
     --animation-time: 300ms
   }.navbar-menu a.contact:before {
       background-color: hsl(var(--clr-green) / 0.7);
+    }footer {
+  background-color: hsl(var(--clr-blue));
+}.skills .skills-block {
+    margin-block: 2rem;
+    text-align: center
+  }.skills .skills-block .skills-block-gallery {
+      display: flex;
+      justify-content: center;
+      font-size: 3rem
+    }.skills .skills-block .skills-block-gallery > * {
+        margin-inline: 1rem;
+      }.skills .skills-block h4 {
+      display: block;
+      margin-bottom: 1rem;
     }

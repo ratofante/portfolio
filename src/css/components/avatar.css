@@ -1,0 +1,14 @@
+.avatar-main {
+  display: flex;
+  flex-direction: row;
+}
+.avatar-img {
+  position: relative;
+  width: 50%;
+  margin: auto;
+  margin-block: 1rem;
+  & img {
+    width: 100%;
+    border-radius: 50%;
+  }
+}

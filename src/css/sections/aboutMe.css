@@ -1,0 +1,19 @@
+.skills {
+  & .skills-block {
+    margin-block: 2rem;
+    text-align: center;
+    & .skills-block-gallery {
+      display: flex;
+      justify-content: center;
+      font-size: 3rem;
+      & > * {
+        margin-inline: 1rem;
+      }
+    }
+
+    & h4 {
+      display: block;
+      margin-bottom: 1rem;
+    }
+  }
+}

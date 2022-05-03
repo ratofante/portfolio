@@ -3,6 +3,7 @@
 html {
   font-size: 10px;
   font-family: var(--font-normal);
+  overflow-x: hidden;
 }
 body {
   background-color: var(--white);
@@ -15,6 +16,7 @@ section {
   padding: var(--g-padding);
 }
 :--heading {
+  text-align: inherit;
   font-family: var(--font-special);
 }
 h1 {
@@ -44,6 +46,9 @@ h6 {
 
 .text-container {
   padding-inline: var(--inline-padding);
+  & > * {
+    margin-bottom: 1rem;
+  }
   & h2 {
     text-align: center;
   }

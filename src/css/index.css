@@ -3,8 +3,11 @@
 @import "base/generals.css";
 
 @import "components/spacer.css";
+@import "components/avatar.css";
 
 @import "UI_KIT_DESIGN/ui_kit_design.css";
 
 @import "sections/header.css";
 @import "sections/navbar.css";
+@import "sections/footer.css";
+@import "sections/aboutMe.css";
