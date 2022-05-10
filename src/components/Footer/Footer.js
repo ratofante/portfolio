@@ -12,7 +12,7 @@ const Footer = () => {
       <Separator type={'footer'} />
       <footer>
          <div className="title">
-            <h2 class="tx-white">LibraDev</h2>
+            <h2 className="tx-white">LibraDev</h2>
             <p className='tx-white'>by</p>
             <p className="tx-white fw-700">Rodrigo</p>
             <p className="tx-white fw-700">González</p>
@@ -38,8 +38,8 @@ const Footer = () => {
       <div
          className="spacer"
          style={{
-            'background-image': 'url(assets/img/separators/mobile-footer-end.svg)',
-            'background-color': 'hsl(var(--clr-blue))'
+            'backgroundImage': 'url(assets/img/separators/mobile-footer-end.svg)',
+            'backgroundColor': 'hsl(var(--clr-blue))'
          }}>
       </div>
    </>)

@@ -37,3 +37,13 @@
     }
   }
 }
+@media screen and (min-width: 700px) {
+  .button-nav {
+    width: 85px;
+    height: 85px;
+  }
+  .button-nav:after {
+    width: inherit;
+    height: inherit;
+  }
+}

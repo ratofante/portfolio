@@ -10,10 +10,28 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 100vw;
-  max-height: 90px;
+  height: 90px;
   margin-bottom: 20vh;
   padding-block: var(--g-margin);
+}
+@media screen and (min-width: 700px) {
+  .top-header {
+    margin-bottom: 2vh;
+  }
+}
+.big-logo {
+  display: none;
+  & .logo-container {
+    width: 250px;
+  }
+}
+@media screen and (min-width: 550px) {
+  .logo {
+    display: none;
+  }
+  .big-logo {
+    display: block;
+  }
 }
 .logo-container {
   position: relative;
@@ -36,6 +54,8 @@ header {
   padding-inline: var(--inline-padding);
 }
 .header-bajada {
+  margin: auto;
+  max-width: 250px;
   & h1 {
     text-align: center;
   }
@@ -44,4 +64,49 @@ header {
   display: grid;
   justify-content: center;
   margin: 2rem auto 0px auto;
+}
+@media screen and (min-width: 550px) {
+  .bottom-header {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+  }
+  .header-bajada {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
+.side-header {
+  display: none;
+}
+@media screen and (min-width: 700px) {
+  .bottom-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "logo side"
+      "text side"
+      "button button";
+    max-width: 780px;
+    margin: auto;
+  }
+  .big-logo {
+    grid-area: logo;
+  }
+  .header-bajada {
+    grid-area: text;
+  }
+  .header-bajada-button {
+    width: 85px;
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    transform: translateX(47vw);
+  }
+  .side-header {
+    grid-area: side;
+    display: flex;
+  }
 }

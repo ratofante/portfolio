@@ -1,7 +1,26 @@
 nav {
   position: fixed;
-  right: 0px;
+  right: 6px;
   z-index: 10;
+  transition: all 0.2s ease;
+  & a.top-link {
+    font-weight: var(--fw-700);
+    text-decoration: none;
+    margin-right: min(6vw, 5rem);
+    padding-bottom: 1rem;
+    &:hover {
+      border-bottom: 3px solid currentColor;
+    }
+    &:first-child:hover {
+      color: hsl(var(--clr-brown));
+    }
+    &:nth-child(2):hover {
+      color: hsl(var(--clr-green));
+    }
+    &:last-child:hover {
+      color: hsl(var(--clr-blue));
+    }
+  }
 }
 .menu-icon {
   position: relative;

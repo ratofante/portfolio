@@ -1,0 +1,33 @@
+.side-header {
+  position: relative;
+  bottom: -250px;
+  /* display, está en header.css en la asignación de grid-areas */
+  flex-direction: column;
+  justify-content: flex-end;
+  & h3 {
+    text-align: right;
+    margin-bottom: 2.5rem;
+  }
+}
+.side-atajos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.side-atajos-item {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  justify-content: space-between;
+  width: 230px;
+  margin-bottom: 7rem;
+  font-weight: var(--fw-700);
+  font-size: 1.4rem;
+  letter-spacing: 0.3rem;
+}
+.side-atajos-link {
+  text-decoration: none;
+}
+.list-dot {
+  width: 30px;
+}

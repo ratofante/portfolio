@@ -5,8 +5,6 @@ const Separator = ({ type }) => {
    const [up, setUp] = useState(null);
    const [down, setDown] = useState(null);
 
-   console.log(type);
-
    const top = [
       "assets/img/separators/mobile-down1.svg",
       "assets/img/separators/mobile-down2.svg",
@@ -30,17 +28,15 @@ const Separator = ({ type }) => {
 
    }, [type]);
 
-   console.log('separator render');
-
    return (<>
       <div className="spacer-container">
          <div
             className="spacer"
-            style={{ 'background-image': 'url(' + down + ')' }}>
+            style={{ 'backgroundImage': 'url(' + down + ')' }}>
          </div>
          <div
             className="spacer"
-            style={{ 'background-image': 'url(' + up + ')' }}>
+            style={{ 'backgroundImage': 'url(' + up + ')' }}>
          </div>
       </div>
    </>)
