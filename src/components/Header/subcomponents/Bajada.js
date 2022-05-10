@@ -1,12 +1,17 @@
 import React from 'react'
+import ButtonNav from '../../Component/ButtonNav'
 
 const Bajada = () => {
-   return (
+   return (<>
       <div className='header-bajada'>
          <h1>LibraDev</h1>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam consequuntur aliquam magnam?</p>
+         <p>¡Hola! Mi nombre es Rodrigo González Wilkens. Vivo en Buenos Aires, Argentina. Tengo 31 años, soy desarrollador web y este es mi portfolio.</p>
+         <div className="header-bajada-button">
+            <ButtonNav target={'aboutMe'} text={'Go!'} />
+         </div>
       </div>
-   )
+
+   </>)
 }
 
 export default Bajada

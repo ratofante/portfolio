@@ -1,9 +1,11 @@
 @import "base/reset.css";
 @import "base/variables.css";
 @import "base/generals.css";
+@import "base/utility-classes.css";
 
 @import "components/spacer.css";
 @import "components/avatar.css";
+@import "components/button-nav.css";
 
 @import "UI_KIT_DESIGN/ui_kit_design.css";
 
@@ -11,3 +13,4 @@
 @import "sections/navbar.css";
 @import "sections/footer.css";
 @import "sections/aboutMe.css";
+@import "sections/contact.css";

@@ -1,3 +1,24 @@
 footer {
   background-color: hsl(var(--clr-blue));
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  outline: 2px solid hsl(var(--clr-blue));
+  & > * {
+    margin-bottom: 2rem;
+  }
+  & .title {
+    & h2 {
+      text-align: center;
+    }
+  }
+}
+
+.footer-redes {
+  display: flex;
+  flex-direction: column;
+}
+.footer-redes-link {
+  position: relative;
+  font-size: 3.2rem;
 }

@@ -1,0 +1,32 @@
+/* TEXT */
+.tx-white {
+  color: hsl(var(--clr-white));
+}
+.tx-black {
+  color: hsl(var(--clr-black));
+}
+.tx-blue {
+  color: hsl(var(--clr--blue));
+}
+.tx-brown {
+  color: hsl(var(--clr-brown));
+}
+.tx-green {
+  color: hsl(var(--clr-green));
+}
+.bg-black {
+  background-color: hsl(var(--clr-black));
+}
+.bg-green {
+  background-color: hsl(var(--clr-green));
+}
+.bg-blue {
+  background-color: hsl(var(--clr-blue));
+}
+.bg-brown {
+  background-color: hsl(var(--clr-brown));
+}
+
+.fw-700 {
+  font-weight: 700;
+}

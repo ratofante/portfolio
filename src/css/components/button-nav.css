@@ -1,0 +1,39 @@
+.button-nav {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  font-size: 2rem;
+  text-align: center;
+  color: hsl(var(--clr-white));
+  background-color: hsl(var(--clr-green) / 0.7);
+  cursor: pointer;
+  transition: all 0.18s ease;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    z-index: -1;
+    width: 60px;
+    height: 60px;
+    background-color: hsl(var(--clr-blue) / 0.2);
+    transition: all 0.18s ease;
+  }
+  &:hover {
+    background-color: hsl(var(--clr-brown));
+    scale: 1.15;
+    &:after {
+      scale: 1.1;
+    }
+  }
+  &:focus {
+    outline: none;
+    background-color: hsl(var(--clr-brown));
+    &:after {
+      scale: 1.1;
+    }
+  }
+}

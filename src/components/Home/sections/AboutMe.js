@@ -23,29 +23,29 @@ import Avatar from '../../Component/Avatar';
 
 const AboutMe = () => {
    return (
-      <div className='section-wrapper'>
+      <div className='section-wrapper' id="aboutMe">
          <div className='text-container'>
             <h2>About Me</h2>
-            <p>Mi nombre es Rodrigo González Wilkens. Tengo 31 años, nací en Santiago de Chile pero vivo en Buenos Aires, Argentina, desde el 2010.</p>
             <p>Comencé a interesarme en programación y desarrollo web ante la necesidad de gestionar un espacio educativo. Desde entonces, estoy 100% dedicado al desarrollo web.</p>
+            <p>Me encanta que siempre haya algo nuevo para aprender y llevar los proyectos a su materialización digital.</p>
          </div>
          <Avatar type="avatar1" />
          <div className='skills'>
             <div className='skills-block'>
                <h4>Lenguajes de programación y marcado</h4>
-               <div className='skills-block-gallery'>
+               <div className='skills-block-gallery tx-blue'>
                   <Js /><Php /><Html /><Css />
                </div>
             </div>
             <div className='skills-block'>
                <h4>Frameworks y librerías</h4>
-               <div className='skills-block-gallery'>
+               <div className='skills-block-gallery tx-brown'>
                   <Bootstrap /><Laravel /><LogoReact /><JQuery />
                </div>
             </div>
             <div className='skills-block'>
                <h4>Tecnologías</h4>
-               <div className='skills-block-gallery'>
+               <div className='skills-block-gallery tx-green'>
                   <Sass /><PostCss /><Git /><Composer /><MySQL /><Npm />
                </div>
             </div>

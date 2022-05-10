@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { IoMdDownload as Download } from 'react-icons/io';
 
 const Avatar = ({ avatar }) => {
    const [img, setImg] = useState(null);
@@ -18,7 +19,7 @@ const Avatar = ({ avatar }) => {
    }, []);
 
    return (
-      <div className="avatarWrapper">
+      <div className="avatar-wrapper">
          <div className="avatar-separator">
             <img src="assets/img/separators/wave-blue.svg" alt="" />
          </div>
@@ -26,21 +27,27 @@ const Avatar = ({ avatar }) => {
             <div className="avatar-info">
                <h5>Datos: </h5>
                <div className="avatar-datos">
-                  <p>Nombre:</p>
-                  <p>Rodrigo</p>
+                  <p>Rodrigo González Wilkens</p>
                </div>
                <div className="avatar-datos">
-                  <p>Apellido:</p>
-                  <p>González Wilkens</p>
+                  <p>28/09/1990</p>
                </div>
                <div className="avatar-datos">
-                  <p>Fecha de nacimiento:</p>
-                  <p>28 de septiembre 1990</p>
+                  <p>Chileno</p>
+               </div>
+               <div className="avatar-datos">
+                  <p>Residente en Buenos Aires, Argentina.</p>
                </div>
             </div>
             <div className="avatar-img">
                <img src={img} alt="avatar-Rodrigo" />
             </div>
+         </div>
+         <div className="cv-button-container">
+            <button className='cv-button'>
+               <span className="cv-button-text">CV</span>
+               <Download />
+            </button>
          </div>
          <div className="avatar-separator">
             <img src="assets/img/separators/wave-green.svg" alt="" />

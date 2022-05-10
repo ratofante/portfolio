@@ -48,7 +48,7 @@ nav {
   justify-content: space-evenly;
   z-index: 8;
   background-image: url("../img/mobile-menu-bg.svg");
-  background-color: hsl(var(--clr-white));
+  background-color: white;
   background-repeat: no-repeat;
   transition: transform 350ms ease;
   border-bottom-left-radius: 15px 74px;
@@ -57,7 +57,7 @@ nav {
     transform: translateX(110%);
   }
   &[aria-hidden="false"] {
-    transform: translate(-88%, -7%);
+    transform: translate(-90%, -7%);
   }
   & a {
     position: relative;
