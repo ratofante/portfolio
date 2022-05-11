@@ -1,33 +1,50 @@
 .side-header {
-  position: relative;
-  bottom: -250px;
   /* display, está en header.css en la asignación de grid-areas */
-  flex-direction: column;
-  justify-content: flex-end;
   & h3 {
-    text-align: right;
+    display: none;
+    text-align: center;
     margin-bottom: 2.5rem;
   }
 }
 .side-atajos {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   align-items: flex-end;
+  position: relative;
+  padding: 0px;
+  z-index: 2;
 }
 .side-atajos-item {
   display: flex;
+  flex-direction: column-reverse;
   align-items: center;
   list-style: none;
   justify-content: space-between;
-  width: 230px;
-  margin-bottom: 7rem;
+  width: 215px;
   font-weight: var(--fw-700);
   font-size: 1.4rem;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.1rem;
 }
 .side-atajos-link {
   text-decoration: none;
 }
 .list-dot {
   width: 30px;
+}
+@media screen and (min-width: 1260px) {
+  .side-header {
+    flex: 1 0 35%;
+    display: flex;
+    justify-content: center;
+  }
+  .side-atajos {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .side-atajos-item {
+    flex-direction: row-reverse;
+    width: 290px;
+  }
 }

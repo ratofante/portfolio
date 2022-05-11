@@ -69,6 +69,7 @@ nav {
   background-image: url("../img/mobile-menu-bg.svg");
   background-color: white;
   background-repeat: no-repeat;
+  background-size: contain;
   transition: transform 350ms ease;
   border-bottom-left-radius: 15px 74px;
   border-top-left-radius: 15px 74px;
@@ -123,5 +124,11 @@ nav {
     &:before {
       background-color: hsl(var(--clr-green) / 0.7);
     }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .navbar-menu .nav-item {
+    font-size: 3rem;
   }
 }

@@ -7,9 +7,14 @@
 }
 .spacer {
   position: relative;
-  aspect-ratio: 6/5;
+  aspect-ratio: 4/3;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+@media screen and (min-width: 700px) {
+  .spacer {
+    aspect-ratio: 20/11;
+  }
 }

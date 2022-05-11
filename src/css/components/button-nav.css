@@ -17,8 +17,8 @@
     left: 0;
     border-radius: 50%;
     z-index: -1;
-    width: 60px;
-    height: 60px;
+    width: inherit;
+    height: inherit;
     background-color: hsl(var(--clr-blue) / 0.2);
     transition: all 0.18s ease;
   }
@@ -37,13 +37,15 @@
     }
   }
 }
+@media screen and (min-width: 550px) {
+  .button-nav {
+    width: 100px;
+    height: 100px;
+  }
+}
 @media screen and (min-width: 700px) {
   .button-nav {
-    width: 85px;
-    height: 85px;
-  }
-  .button-nav:after {
-    width: inherit;
-    height: inherit;
+    width: 130px;
+    height: 130px;
   }
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import ButtonNav from '../Component/ButtonNav'
 import Separator from '../Separator/Separator'
 import Bajada from './subcomponents/Bajada'
 import Logo from './subcomponents/Logo'
@@ -13,9 +14,11 @@ const Header = () => {
             <Navigation />
          </div>
          <div className="bottom-header">
-            <Logo type={'large'} />
             <Bajada />
             <SideHeaderContent />
+            <div className="header-bajada-button">
+               <ButtonNav target={'aboutMe'} text={'Go!'} />
+            </div>
          </div>
       </header>
       <Separator type={'section'} />

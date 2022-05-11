@@ -42,6 +42,24 @@ h6 {
   font-size: 1.4rem;
   text-align: center;
 }
+@media screen and (min-width: 550px) {
+  :--general-text {
+    font-size: 1.65rem;
+  }
+}
+@media screen and (min-width: 700px) {
+  :--general-text {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (min-width: 1260px) {
+  :--general-text {
+    font-size: 2.2rem;
+  }
+  h1 {
+    font-size: 8.3rem;
+  }
+}
 
 .text-container {
   padding-inline: var(--inline-padding);
