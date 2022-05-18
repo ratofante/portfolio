@@ -24,7 +24,7 @@ import Avatar from '../../Component/Avatar';
 const AboutMe = () => {
    return (
       <div className='section-wrapper' id="aboutMe">
-         <div className='text-container'>
+         <div className='text-container about-text'>
             <h2>About Me</h2>
             <p>Comencé a interesarme en programación y desarrollo web ante la necesidad de gestionar un espacio educativo. Desde entonces, estoy 100% dedicado al desarrollo web.</p>
             <p>Me encanta que siempre haya algo nuevo para aprender y llevar los proyectos a su materialización digital.</p>

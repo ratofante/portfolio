@@ -70,3 +70,14 @@ h6 {
     text-align: center;
   }
 }
+@media screen and (min-width: 550px) {
+  .text-container {
+    & h2 {
+      font-size: 3.8rem;
+    }
+    & p {
+      max-width: 550px;
+      margin: auto;
+    }
+  }
+}

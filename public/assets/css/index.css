@@ -134,7 +134,15 @@ h6 {
     margin-bottom: 1rem;
   }.text-container h2 {
     text-align: center;
-  }/* TEXT */.tx-white {
+  }@media screen and (min-width: 550px) {
+    .text-container h2 {
+      font-size: 3.8rem;
+    }
+    .text-container p {
+      max-width: 550px;
+      margin: auto;
+    }
+}/* TEXT */.tx-white {
   color: hsl(var(--clr-white));
 }.tx-black {
   color: hsl(var(--clr-black));
@@ -172,29 +180,51 @@ h6 {
   }
 }.avatar-wrapper {
   position: relative;
+  display: flex;
+  flex-direction: column;
   margin-block: 75px;
+}@media screen and (min-width: 1260px) {
+  .avatar-wrapper {
+    margin: 0px auto;
+    width: 515px;
+  }
 }.avatar-main {
   display: flex;
-  flex-direction: row;
-  margin-block: 2rem;
+  flex-direction: column;
+  margin: 2rem auto;
   padding-inline: 1rem;
+}@media screen and (min-width: 1260px) {
+  .avatar-main {
+    flex-direction: column-reverse;
+    margin: 0px auto;
+  }
 }.avatar-info {
+  text-align: center;
   padding-inline: 1rem
 }.avatar-info h5 {
+    font-size: 2rem;
     margin: 0px;
-  }.avatar-datos p {
-    text-align: left;
+  }@media screen and (min-width: 1260px) {
+    .avatar-info h5 {
+      font-size: 3.2rem;
+    }
+}.avatar-datos p {
+    text-align: center;
   }.avatar-img {
   position: relative;
   display: flex;
   align-items: center;
+  margin: 2rem auto;
   width: 50%;
   padding-inline: 1rem
 }.avatar-img img {
     width: 100%;
     border-radius: 50%;
-  }.cv-button-container {
-  position: absolute;
+  }@media screen and (min-width: 1260px) {
+  .avatar-img {
+    width: 75%;
+  }
+}.cv-button-container {
   display: grid;
   justify-content: center;
   width: 100%;
@@ -209,7 +239,8 @@ h6 {
   bottom: 12px;
   border-radius: 50%;
   border: none;
-  background-color: hsl(var(--clr-green))
+  background-color: hsl(var(--clr-green));
+  transition: all 0.2s ease
 }.cv-button > span {
     position: relative;
     top: 4px;
@@ -225,7 +256,25 @@ h6 {
     font-size: 2.3rem
   }.cv-button svg path {
       background-color: black;
-    }.button-nav {
+    }.cv-button:hover {
+    scale: 1.14;
+  }@media screen and (min-width: 1260px) {
+  .cv-button-container {
+    margin: auto;
+  }
+  .cv-button {
+    width: 120px;
+    height: 120px
+  }
+    .cv-button > span {
+      top: 20px;
+      font-size: 4rem;
+    }
+    .cv-button svg {
+      bottom: 15px;
+      font-size: 3rem;
+    }
+}.button-nav {
   position: relative;
   width: 60px;
   height: 60px;
@@ -268,6 +317,14 @@ h6 {
     width: 130px;
     height: 130px;
   }
+}@media screen and (min-width: 1260px) {
+  .button-nav {
+    position: relative;
+    top: 15px;
+    width: 160px;
+    height: 160px;
+    font-size: 3rem;
+  }
 }/* display, está en header.css en la asignación de grid-areas */.side-header h3 {
     display: none;
     text-align: center;
@@ -296,7 +353,6 @@ h6 {
   width: 30px;
 }@media screen and (min-width: 1260px) {
   .side-header {
-    flex: 1 0 35%;
     display: flex;
     justify-content: center;
   }
@@ -445,11 +501,10 @@ h6 {
   .bottom-header {
     position: relative;
     top: 75px;
-    flex-flow: row wrap;
     max-width: 100%;
   }
   .header-wrapper {
-    flex: 1 0 65%;
+    margin-right: 80px;
   }
   .header-bajada {
     max-width: 430px;
@@ -457,6 +512,13 @@ h6 {
   .header-bajada-button {
     margin-top: 0px;
     top: 25px;
+  }
+  .bottom-header-container {
+    display: flex;
+    justify-content: center;
+  }
+  .side-header {
+    justify-content: initial;
   }
 }nav {
   position: fixed;
@@ -581,19 +643,44 @@ h6 {
 }.footer-redes-link {
   position: relative;
   font-size: 3.2rem;
-}.skills .skills-block {
-    margin-block: 2rem;
-    text-align: center
-  }.skills .skills-block .skills-block-gallery {
-      display: flex;
-      justify-content: center;
-      font-size: 3rem
-    }.skills .skills-block .skills-block-gallery > * {
-        margin-inline: 1rem;
-      }.skills .skills-block h4 {
-      display: block;
-      margin-bottom: 1rem;
-    }.contact-gallery {
+}@media screen and (min-width: 1260px) {
+  #aboutMe {
+    display: grid;
+    grid-template-areas:
+      "text text cv cv cv"
+      "icons icons cv cv cv";
+    max-width: 1060px;
+    margin: auto;
+  }
+  .about-text {
+    grid-area: text;
+  }
+  .skills {
+    grid-area: icons;
+  }
+  .avatar-wrapper {
+    grid-area: cv;
+  }
+}.skills-block {
+  margin-block: 3rem;
+  text-align: center
+}.skills-block .skills-block-gallery {
+    display: flex;
+    justify-content: center;
+    font-size: 5rem
+  }.skills-block .skills-block-gallery > * {
+      margin-inline: 1rem;
+    }.skills-block h4 {
+    display: block;
+    margin-bottom: 1.5rem;
+  }@media screen and (min-width: 1260px) {
+    .skills-block .skills-block-gallery {
+      font-size: 7rem;
+    }
+    .skills-block h4 {
+      font-size: 2.4rem;
+    }
+}.contact-gallery {
   display: flex;
   justify-content: center;
   font-size: 4rem;

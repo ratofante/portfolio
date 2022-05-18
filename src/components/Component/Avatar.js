@@ -20,9 +20,6 @@ const Avatar = ({ avatar }) => {
 
    return (
       <div className="avatar-wrapper">
-         <div className="avatar-separator">
-            <img src="assets/img/separators/wave-blue.svg" alt="" />
-         </div>
          <div className='avatar-main'>
             <div className="avatar-info">
                <h5>Datos: </h5>
@@ -48,9 +45,6 @@ const Avatar = ({ avatar }) => {
                <span className="cv-button-text">CV</span>
                <Download />
             </button>
-         </div>
-         <div className="avatar-separator">
-            <img src="assets/img/separators/wave-green.svg" alt="" />
          </div>
       </div>
 

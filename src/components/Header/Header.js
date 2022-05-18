@@ -14,8 +14,10 @@ const Header = () => {
             <Navigation />
          </div>
          <div className="bottom-header">
-            <Bajada />
-            <SideHeaderContent />
+            <div className="bottom-header-container">
+               <Bajada />
+               <SideHeaderContent />
+            </div>
             <div className="header-bajada-button">
                <ButtonNav target={'aboutMe'} text={'Go!'} />
             </div>
