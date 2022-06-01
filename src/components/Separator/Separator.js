@@ -23,7 +23,7 @@ const Separator = ({ type }) => {
          setDown(bottom[Math.floor(Math.random() * bottom.length)]);
       } else {
          setUp("assets/img/separators/mobile-footer-down3.svg");
-         setDown("assets/img/separators/mobile-footer-up3.svg");
+         setDown("assets/img/separators/footer-up.svg");
       }
 
    }, [type]);
@@ -35,7 +35,7 @@ const Separator = ({ type }) => {
             style={{ 'backgroundImage': 'url(' + down + ')' }}>
          </div>
          <div
-            className="spacer"
+            className={type === 'footer' ? 'spacer footer-spacer' : 'spacer'}
             style={{ 'backgroundImage': 'url(' + up + ')' }}>
          </div>
       </div>

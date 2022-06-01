@@ -9,7 +9,14 @@ footer {
   }
   & .title {
     & h2 {
+      font-size: 6rem;
       text-align: center;
+    }
+    & p {
+      font-size: 3rem;
+    }
+    & p:nth-child(2) {
+      font-size: 2rem;
     }
   }
 }
@@ -17,6 +24,12 @@ footer {
 .footer-redes {
   display: flex;
   flex-direction: column;
+  & a {
+    margin-bottom: 2rem;
+  }
+  & svg {
+    font-size: 6rem;
+  }
 }
 .footer-redes-link {
   position: relative;

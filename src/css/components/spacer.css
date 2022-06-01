@@ -13,6 +13,9 @@
   background-position: center;
   background-size: cover;
 }
+.footer-spacer {
+  z-index: -2;
+}
 @media screen and (min-width: 700px) {
   .spacer {
     aspect-ratio: 20/11;

@@ -9,6 +9,11 @@ body,
   background-color: var(--clr-blue);
   max-width: 100vw;
 }
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 section {
   width: inherit;
   margin: var(--g-margin);
@@ -49,12 +54,12 @@ h6 {
 }
 @media screen and (min-width: 700px) {
   :--general-text {
-    font-size: 1.7rem;
+    font-size: 2rem;
   }
 }
 @media screen and (min-width: 1260px) {
   :--general-text {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   h1 {
     font-size: 8.3rem;

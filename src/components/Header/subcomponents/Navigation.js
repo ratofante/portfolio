@@ -1,24 +1,42 @@
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 
 import { RiMenu4Fill, RiCloseFill } from "react-icons/ri";
+
+/* ESTRUCTURA:
+   1. Event para chequear scrolleo, de manera de mostrar la navbar entera
+      o mostrar el ícono para hacer toggle del menú. 
+   2. Funcion para hacer toggle con el menú
+   3. Función para scrollear hasta la secxción del LINK 
+   4. VIEWS
+   5. RETURN 
+*/
 
 const Navigation = () => {
    const menu = useRef(null);
    const [menuIcon, setMenuIcon] = useState(false);
-
    const [scroll, setScroll] = useState(false);
 
-   document.addEventListener('scroll', () => {
-      let height = window.scrollY;
-      height > 50 ? setScroll(true) : setScroll(false);
-   })
+   console.log('nav-render');
 
+   /* 1. Scroll EVENT */
 
+   useEffect(() => {
+      console.log(menu);
+      document.addEventListener('scroll', () => {
+         let height = window.scrollY;
+         if (height > 50) {
+            setScroll(true);
+         } else {
+            setScroll(false);
+            setMenuIcon(false);
+         }
+      });
+   }, []);
 
-   // Función para el botón del menú: display toggle. 
+   /* 2. TOGGLE MENU FUNCTION */
    const toggleMenu = () => {
+      console.log('toggle');
       const links = document.getElementsByClassName('nav-item');
-
       if (menu.current.attributes['aria-hidden'].nodeValue === 'false') {
          menu.current.setAttribute('aria-hidden', 'true');
          for (let i = 0; i < links.length; i++) {
@@ -32,6 +50,12 @@ const Navigation = () => {
       }
    }
 
+   /* 3. Link / Navigation Functions */
+
+
+
+   /* 4. VIEWS */
+
    const menuBtn = () => {
       return (
          <nav>
@@ -41,26 +65,28 @@ const Navigation = () => {
                </button>
             </div>
             <div ref={menu} className="navbar-menu" aria-hidden="true">
-               <a href="/about" className="nav-item about" aria-hidden="true">About me</a>
-               <a href="/work" className="nav-item work" aria-hidden="true">My Work</a>
-               <a href="/contact" className="nav-item contact" aria-hidden="true">Contact</a>
+               <button className="nav-item about" aria-hidden="true">About me</button>
+               <button className="nav-item work" aria-hidden="true">My Work</button>
+               <button className="nav-item contact" aria-hidden="true">Contact</button>
             </div>
          </nav>
       );
    }
    const menuInicial = () => {
       return (<nav>
-         <a href="/about" className="top-link">
+         <button href="/about" className="top-link">
             About
-         </a>
-         <a href="/work" className="top-link">
+         </button>
+         <button href="/work" className="top-link">
             My Work
-         </a>
-         <a href="/contact" className="top-link">
+         </button>
+         <button href="/contact" className="top-link">
             Contact
-         </a>
+         </button>
       </nav>);
    }
+
+   /* 5. RETURN */
 
    return (
       scroll ? menuBtn() : menuInicial()

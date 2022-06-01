@@ -9,7 +9,7 @@ const MyWork = () => {
             <p>En esta sección puedes encontrar mis diferentes trabajos y proyectos personales organizados según las tecnologías implementadas.</p>
          </div>
          <div className='header-bajada-button'>
-            <ButtonNav />
+            <ButtonNav target={'projects'} />
          </div>
       </div>
    )

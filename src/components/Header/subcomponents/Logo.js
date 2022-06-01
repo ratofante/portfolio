@@ -1,26 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Logo = ({ type }) => {
 
-   // const [tipo, setTipo] = useState(false);
-   // if (type === 'large') {
-   //    setTipo(true);
-   // }
-   // console.log(tipo, type);
+   const [clase, setClase] = useState(null);
 
-   function mobileLogo() {
+   useEffect(() => {
+      switch (type) {
+         case 'large':
+            setClase('big-logo');
+            break;
+         case 'footer-logo':
+            setClase('footer-logo');
+            break;
+         case 'minilogo':
+            setClase('minilogo ocultar-minilogo');
+            break;
+         default:
+            setClase('logo');
+            break;
+      }
+   }, [type]);
+
+   function logo() {
       return (
-         <div className="logo">
-            <div className="logo-container">
-               <img id="logo-trans" src="assets/img/logo-trans.png" alt="Page Logo" />
-               <img id="logo-full" src="assets/img/logo-full.png" alt="Page Logo" />
-            </div>
-         </div>
-      )
-   }
-   function largeLogo() {
-      return (
-         <div className="big-logo">
+         <div className={clase} id={type === 'minilogo' ? 'minilogo' : ''}>
             <div className="logo-container">
                <img id="logo-trans" src="assets/img/logo-trans.png" alt="Page Logo" />
                <img id="logo-full" src="assets/img/logo-full.png" alt="Page Logo" />
@@ -29,7 +32,7 @@ const Logo = ({ type }) => {
       )
    }
    return (
-      type === 'large' ? largeLogo() : mobileLogo()
+      logo()
    );
 }
 

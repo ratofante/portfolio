@@ -2,12 +2,13 @@ nav {
   position: fixed;
   right: 6px;
   z-index: 10;
+  height: 30px;
   transition: all 0.2s ease;
-  & a.top-link {
+  & button.top-link {
     font-weight: var(--fw-700);
     text-decoration: none;
     margin-right: min(6vw, 5rem);
-    padding-bottom: 1rem;
+    font-size: 2.3rem;
     &:hover {
       border-bottom: 3px solid currentColor;
     }
@@ -32,6 +33,7 @@ nav {
     position: fixed;
     top: 15px;
     right: 15px;
+    cursor: pointer;
   }
   &:hover {
     background: none;
@@ -79,7 +81,7 @@ nav {
   &[aria-hidden="false"] {
     transform: translate(-90%, -7%);
   }
-  & a {
+  & .nav-item {
     position: relative;
     font-family: "BioRhyme", serif;
     font-weight: var(--fw-900);
@@ -101,7 +103,7 @@ nav {
       animation-delay: 100ms;
     }
   }
-  & a.about {
+  & button.about {
     color: hsl(var(--clr-blue));
     --menu-pos: 19%;
     --animation-time: 150ms;
@@ -109,7 +111,7 @@ nav {
       background-color: hsl(var(--clr-blue) / 0.7);
     }
   }
-  & a.work {
+  & button.work {
     color: hsl(var(--clr-brown));
     --menu-pos: 5%;
     --animation-time: 210ms;
@@ -117,7 +119,7 @@ nav {
       background-color: hsl(var(--clr-brown) / 0.7);
     }
   }
-  & a.contact {
+  & button.contact {
     color: hsl(var(--clr-green));
     --menu-pos: 12%;
     --animation-time: 300ms;
@@ -131,4 +133,38 @@ nav {
   .navbar-menu .nav-item {
     font-size: 3rem;
   }
+}
+
+@keyframes showYourself {
+  0% {
+    transform: translateX(-100%);
+    scale: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    scale: 1;
+  }
+}
+.minilogo {
+  position: fixed;
+  top: 10px;
+  left: 5px;
+  transition: all 0.2s ease;
+  z-index: 10;
+  cursor: pointer;
+}
+@media screen and (min-width: 550px) {
+  .minilogo {
+    position: fixed;
+    top: 10px;
+    left: 15px;
+  }
+}
+.mostrar-minilogo {
+  display: block;
+  animation: showYourself 0.2s ease;
+}
+.ocultar-minilogo {
+  transform: translateX(-100%);
+  scale: 0;
 }

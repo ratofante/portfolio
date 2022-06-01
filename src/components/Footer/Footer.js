@@ -19,7 +19,7 @@ const Footer = () => {
             <p className="tx-white fw-700">Wilkens</p>
          </div>
 
-         <Logo />
+         <Logo type={'footer-logo'} />
 
 
          <div className="footer-redes tx-white">

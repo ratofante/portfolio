@@ -87,6 +87,10 @@ select {
 #root {
   background-color: var(--clr-blue);
   max-width: 100vw;
+}button {
+  background: none;
+  border: none;
+  cursor: pointer;
 }section {
   width: inherit;
   margin: var(--g-margin);
@@ -119,11 +123,11 @@ h6 {
   }
 }@media screen and (min-width: 700px) {
   p,a,li,span {
-    font-size: 1.7rem;
+    font-size: 2rem;
   }
 }@media screen and (min-width: 1260px) {
   p,a,li,span {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   h1 {
     font-size: 8.3rem;
@@ -174,6 +178,8 @@ h6 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}.footer-spacer {
+  z-index: -2;
 }@media screen and (min-width: 700px) {
   .spacer {
     aspect-ratio: 20/11;
@@ -307,7 +313,15 @@ h6 {
     background-color: hsl(var(--clr-brown))
   }.button-nav:focus:after {
       scale: 1.1;
-    }@media screen and (min-width: 550px) {
+    }a.button-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 3rem;
+  text-decoration: none
+}a.button-nav span {
+    font-size: 3rem;
+  }@media screen and (min-width: 550px) {
   .button-nav {
     width: 100px;
     height: 100px;
@@ -410,13 +424,29 @@ h6 {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
   height: 90px;
   margin-bottom: 20vh;
   padding-block: var(--g-margin);
+}.minilogo .logo-container {
+  width: 45px;
 }@media screen and (min-width: 550px) {
   .top-header {
     margin-bottom: 8vh;
+  }
+  .minilogo {
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 10
+  }
+
+    .minilogo:hover .logo-container {
+      transition: scale 0.2s ease;
+      scale: 1.3;
+    }
+  .minilogo .logo-container {
+    width: 75px;
   }
 }@media screen and (min-width: 700px) {
   .header-wrapper {
@@ -434,7 +464,8 @@ h6 {
 }.big-logo .logo-container {
     width: 250px;
     margin: auto;
-  }@media screen and (min-width: 550px) {
+  }.logo {
+}@media screen and (min-width: 550px) {
   .logo {
     display: none;
   }
@@ -524,19 +555,20 @@ h6 {
   position: fixed;
   right: 6px;
   z-index: 10;
+  height: 30px;
   transition: all 0.2s ease
-}nav a.top-link {
+}nav button.top-link {
     font-weight: var(--fw-700);
     text-decoration: none;
     margin-right: min(6vw, 5rem);
-    padding-bottom: 1rem
-  }nav a.top-link:hover {
+    font-size: 2.3rem
+  }nav button.top-link:hover {
       border-bottom: 3px solid currentColor;
-    }nav a.top-link:first-child:hover {
+    }nav button.top-link:first-child:hover {
       color: hsl(var(--clr-brown));
-    }nav a.top-link:nth-child(2):hover {
+    }nav button.top-link:nth-child(2):hover {
       color: hsl(var(--clr-green));
-    }nav a.top-link:last-child:hover {
+    }nav button.top-link:last-child:hover {
       color: hsl(var(--clr-blue));
     }.menu-icon {
   position: relative;
@@ -548,6 +580,7 @@ h6 {
     position: fixed;
     top: 15px;
     right: 15px;
+    cursor: pointer;
   }.menu-icon:hover {
     background: none;
   }.menu-icon svg {
@@ -587,46 +620,74 @@ h6 {
     transform: translateX(110%);
   }.navbar-menu[aria-hidden="false"] {
     transform: translate(-90%, -7%);
-  }.navbar-menu a {
+  }.navbar-menu .nav-item {
     position: relative;
     font-family: "BioRhyme", serif;
     font-weight: var(--fw-900);
     font-size: 2rem;
     text-decoration: none
-  }.navbar-menu a:before {
+  }.navbar-menu .nav-item:before {
       content: "";
       position: absolute;
       bottom: 0;
       width: 100vw;
       height: 5px;
       border-radius: var(--border-radius);
-    }.navbar-menu a[aria-hidden="true"] {
+    }.navbar-menu .nav-item[aria-hidden="true"] {
       animation: exitToRight 250ms ease forwards;
-    }.navbar-menu a[aria-hidden="false"] {
+    }.navbar-menu .nav-item[aria-hidden="false"] {
       animation: sliceFromRight var(--animation-time) ease forwards;
       animation-delay: 100ms;
-    }.navbar-menu a.about {
+    }.navbar-menu button.about {
     color: hsl(var(--clr-blue));
     --menu-pos: 19%;
     --animation-time: 150ms
-  }.navbar-menu a.about:before {
+  }.navbar-menu button.about:before {
       background-color: hsl(var(--clr-blue) / 0.7);
-    }.navbar-menu a.work {
+    }.navbar-menu button.work {
     color: hsl(var(--clr-brown));
     --menu-pos: 5%;
     --animation-time: 210ms
-  }.navbar-menu a.work:before {
+  }.navbar-menu button.work:before {
       background-color: hsl(var(--clr-brown) / 0.7);
-    }.navbar-menu a.contact {
+    }.navbar-menu button.contact {
     color: hsl(var(--clr-green));
     --menu-pos: 12%;
     --animation-time: 300ms
-  }.navbar-menu a.contact:before {
+  }.navbar-menu button.contact:before {
       background-color: hsl(var(--clr-green) / 0.7);
     }@media screen and (min-width: 700px) {
   .navbar-menu .nav-item {
     font-size: 3rem;
   }
+}@keyframes showYourself {
+  0% {
+    transform: translateX(-100%);
+    scale: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    scale: 1;
+  }
+}.minilogo {
+  position: fixed;
+  top: 10px;
+  left: 5px;
+  transition: all 0.2s ease;
+  z-index: 10;
+  cursor: pointer;
+}@media screen and (min-width: 550px) {
+  .minilogo {
+    position: fixed;
+    top: 10px;
+    left: 15px;
+  }
+}.mostrar-minilogo {
+  display: block;
+  animation: showYourself 0.2s ease;
+}.ocultar-minilogo {
+  transform: translateX(-100%);
+  scale: 0;
 }footer {
   background-color: hsl(var(--clr-blue));
   display: flex;
@@ -636,11 +697,20 @@ h6 {
 }footer > * {
     margin-bottom: 2rem;
   }footer .title h2 {
+      font-size: 6rem;
       text-align: center;
+    }footer .title p {
+      font-size: 3rem;
+    }footer .title p:nth-child(2) {
+      font-size: 2rem;
     }.footer-redes {
   display: flex;
-  flex-direction: column;
-}.footer-redes-link {
+  flex-direction: column
+}.footer-redes a {
+    margin-bottom: 2rem;
+  }.footer-redes svg {
+    font-size: 6rem;
+  }.footer-redes-link {
   position: relative;
   font-size: 3.2rem;
 }@media screen and (min-width: 1260px) {
@@ -684,6 +754,7 @@ h6 {
   display: flex;
   justify-content: center;
   font-size: 4rem;
+  margin-top: 2rem;
 }.contact-button {
   position: relative;
   width: 4rem;
