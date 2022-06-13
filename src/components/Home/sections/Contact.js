@@ -15,15 +15,15 @@ const Contact = () => {
             <p>Puedes contactarme por las siguientes redes:</p>
          </div>
          <div className="contact-gallery">
-            <button className='contact-button'>
+            <a href="https://www.linkedin.com/in/rodrigo-g-wilkens/" target="_blank" rel='noreferrer' className='contact-button'>
                <Linkedin className='tx-blue' />
-            </button>
-            <button className='contact-button'>
+            </a>
+            <a href="mailto:gwilkens.r@gmail.com" className='contact-button'>
                <Mail className='tx-brown' />
-            </button>
-            <button className='contact-button'>
+            </a>
+            <a href="https://wa.me/5491156140699" target="_blank" rel='noreferrer' className='contact-button'>
                <Whatsapp className='tx-green' />
-            </button>
+            </a>
          </div>
       </div>
    )

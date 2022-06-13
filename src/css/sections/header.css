@@ -16,6 +16,13 @@ header {
 .minilogo .logo-container {
   width: 45px;
 }
+.footer-logo {
+  cursor: pointer;
+}
+.footer-logo:hover .logo-container {
+  transition: scale 0.2s ease;
+  scale: 1.3;
+}
 @media screen and (min-width: 550px) {
   .top-header {
     margin-bottom: 8vh;
@@ -54,8 +61,6 @@ header {
     width: 250px;
     margin: auto;
   }
-}
-.logo {
 }
 @media screen and (min-width: 550px) {
   .logo {

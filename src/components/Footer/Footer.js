@@ -1,11 +1,11 @@
 import React from 'react'
-import Logo from '../Header/subcomponents/Logo'
 import Separator from '../Separator/Separator'
 import {
    IoLogoCodepen as Codepen,
    IoLogoGithub as Github,
    IoLogoLinkedin as Linkedin
 } from 'react-icons/io';
+import FooterLogo from './components/FooterLogo';
 
 const Footer = () => {
    return (<>
@@ -19,7 +19,7 @@ const Footer = () => {
             <p className="tx-white fw-700">Wilkens</p>
          </div>
 
-         <Logo type={'footer-logo'} />
+         <FooterLogo />
 
 
          <div className="footer-redes tx-white">

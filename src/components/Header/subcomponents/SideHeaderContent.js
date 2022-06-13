@@ -5,26 +5,26 @@ const SideHeaderContent = () => {
    return (
       <div className='side-header'>
          <h3>Acceso rápido</h3>
-         <ul className="side-atajos">
-            <li className='side-atajos-item'>
-               <Link to={'/cv'} className="side-atajos-link">Curriculum Vitae</Link>
+         <nav className="side-atajos">
+            <Link to={'/cv'} className='side-atajos-item'>
+               <span className="side-atajos-span">Curriculum Vitae</span>
                <div className="list-dot">
                   <img src="./assets/img/list-dots/list-dot-1.svg" alt="dot" />
                </div>
-            </li>
-            <li className='side-atajos-item'>
-               <Link to={'/proyectos'} className="side-atajos-link">Últimos proyectos</Link>
+            </Link>
+            <Link to={'/proyectos'} className='side-atajos-item'>
+               <span className="side-atajos-span">Últimos proyectos</span>
                <div className="list-dot">
                   <img src="./assets/img/list-dots/list-dot-2.svg" alt="dot" />
                </div>
-            </li>
-            <li className='side-atajos-item'>
-               <Link to={'/recursos'} className="side-atajos-link">Recursos</Link>
+            </Link>
+            <Link to={'/recursos'} className='side-atajos-item'>
+               <span className="side-atajos-span">Recursos</span>
                <div className="list-dot">
                   <img src="./assets/img/list-dots/list-dot-3.svg" alt="dot" />
                </div>
-            </li>
-         </ul>
+            </Link>
+         </nav>
       </div>
    )
 }
